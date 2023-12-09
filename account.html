@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ACCOUNT product</title>
+        <link rel="stylesheet"href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images/logo.jpeg"width="125px">
+                    </div>
+                    <nav>
+                        <ul>
+                            
+                            <li><a href="">ACCOUNT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="account-page">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="images/images.jpeg" width="100%">
+                            </div>
+                            <div class="col-2">
+                                <div class="form-container">
+                                    <div class="form-btn">
+                                        <span onclick="Login()">Login</span>
+                                        <span onclick="Register()">Register</span>
+                                        <hr id="indicator">
+                                    </div>
+                                    
+                                    <form id="LoginForm">
+                                        <input type="text" placeholder="Username">
+                                        <input type="password" placeholder="password">
+                                        <button type="submit" class="btn">Login</button>
+                                        <a href="">Forget password</a>
+                                    </form>
+
+                                    <form id="RegisterForm">
+                                        <input type="text" placeholder="Username">
+                                        <input type="email" placeholder="email">
+                                        <input type="password" placeholder="password">
+                                        <button type="submit" class="btn">Register</button>
+                                    </form>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+
+                    var LoginForm= document.getElementById("LoginForm");
+                    var RegisterForm= document.getElementById("RegisterForm");
+                    var indicator= document.getElementById("indicator");
+                    function Register(){
+                        RegisterForm.style.transform="translateX(0px)";
+                        LoginForm.style.transform="translateX(0px)";
+                        indicator.style.transform="translateX(100px)";
+                    }
+                    function Login(){
+                        RegisterForm.style.transform="translateX(300px)";
+                        LoginForm.style.transform="translateX(300px)";
+                        indicator.style.transform="translateX(0px)";
+                    }
+                </script>
+                
+    </body>
+</html>
